@@ -14,6 +14,7 @@ from image_data_set import ImageDataSet
 if __name__ == "__main__":
     fname = "tmp/data_set/labels.txt"
     dataset = ImageDataSet(fname)
+    print dataset.image[0]
     cv2.imshow(str(dataset.train_label[0]),dataset.image[0])
     cv2.imshow(str(dataset.train_label[1]),dataset.image[1])
     cv2.imshow(str(dataset.train_label[2]),dataset.image[2])

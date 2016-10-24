@@ -31,7 +31,7 @@ class ImageDataSet:
         for line in self.f:
             line = line.replace("\n", " ")
             l = line.split()
-            img = cv2.imread(l[0])
+            img = cv2.imread("tmp/data_set/"+l[0])
             img = cv2.resize(img, (28, 28))
             self.image.append(img.astype(np.float32)/255)
             self.train_image.append(img.flatten().astype(np.float32)/255.0)
